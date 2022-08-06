@@ -1,12 +1,30 @@
 * {
     margin: 0;
     padding: 0;
-}
+} 
 
 body {
     display: grid;
+    position: relative;
+    height: 100vh;
 }
 
 .hello {
     color: red;
+}
+
+.bkImg {
+    z-index: 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    color: blue;
+}
+
+.header, .bkgImg, .footer, .blurb, body{
+    border: 1px solid black;
 }
