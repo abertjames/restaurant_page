@@ -12,9 +12,10 @@ function component() {
  
     // return element;
 
-    const foodImage = document.createElement("img");
-    foodImage.src = 'images/the-slim-s-diner.jpeg'
-    return foodImage;
+    // const foodImage = document.createElement("img");
+    // foodImage.src = 'images/the-slim-s-diner.jpeg'
+    // foodImage.src = 'images/Jack_Rabbit_Slims_CC_Master_Squares_Layers_1200x1200.webp'
+    // return foodImage;
 }
  
 document.body.appendChild(component());
