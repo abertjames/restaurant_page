@@ -20,6 +20,7 @@ body {
     height: 100vh;
 }
 
+/* main page content */
 .header{
     position: fixed;
     display: grid;
@@ -101,6 +102,9 @@ button:hover{
     background-color: var(--background-color-dark);    
     border: var(--border-color); 
 }
+/* end main page content  */
+
+
 
 .header, .footer, .blurb, body{
     /* border: 1px solid black; */

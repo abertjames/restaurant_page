@@ -23,3 +23,7 @@
 import initializeWebsite from './initWebsite';
 
 initializeWebsite();
+
+// import loadContactPage from './contact';
+
+// loadContactPage();

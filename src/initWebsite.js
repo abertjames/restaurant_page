@@ -1,4 +1,4 @@
-function createHeader(){
+const createHeader = () => {
     const header = document.createElement('header');
     header.classList.add("header");
 
@@ -12,7 +12,7 @@ function createHeader(){
     return header;
 }
 
-function createNavBar() {
+const createNavBar = () =>  {
     const navBar = document.createElement('nav');
 
     const homeButton = document.createElement('button');
@@ -36,7 +36,7 @@ function createNavBar() {
     return navBar;
 }
 
-function createBlurb() {
+const createBlurb = () => {
     const blurb = document.createElement('main');
     blurb.classList.add('blurb');
 
@@ -63,7 +63,7 @@ function createBlurb() {
     return blurb
 }
 
-function createFooter() {
+const createFooter = () => {
     const footer = document.createElement('footer');
     footer.classList.add('footer');
 
@@ -76,7 +76,7 @@ function createFooter() {
     return footer
 }
 
-function createBackgroundImage(){
+const createBackgroundImage = () => {
     const bkgImg = document.createElement('img');
     bkgImg.src = 'images/Jack_Rabbit_Slims_CC_Master_Squares_Layers_1200x1200.webp';
     bkgImg.alt = 'jack rabbit slim'
@@ -92,7 +92,7 @@ function createBackgroundImage(){
 
 
 
-function initializeWebsite(){
+const initializeWebsite = () => {
     const content = document.getElementById("content");
 
     content.appendChild(createHeader());
