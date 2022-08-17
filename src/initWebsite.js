@@ -1,3 +1,5 @@
+import loadBlurb from "./blurb";
+
 const createHeader = () => {
     const header = document.createElement('header');
     header.classList.add("header");
@@ -36,31 +38,11 @@ const createNavBar = () =>  {
     return navBar;
 }
 
-const createBlurb = () => {
-    const blurb = document.createElement('main');
-    blurb.classList.add('blurb');
-
-    const imgCropper = document.createElement('div');
-    imgCropper.classList.add('imageCropper');
-
-    const coverPhoto = document.createElement('img');
-    coverPhoto.src = 'images/uma_menu_2.png';
-    coverPhoto.alt = 'uma';
-    coverPhoto.classList.add('coverPhoto')
-
-    function writeParagraph(text) {
-        const paragraph = document.createElement('p');
-        paragraph.textContent = text;
-        return paragraph
-    }
-
-    blurb.appendChild(writeParagraph('The best five dollar shakes money can buy'));
-    blurb.appendChild(writeParagraph('Established 1982'));
-    imgCropper.appendChild(coverPhoto);
-    blurb.appendChild(imgCropper);
-    blurb.appendChild(writeParagraph('The next best thing to a time machine!'));
-
-    return blurb
+const createMainContent = () => {
+    const mainContent = document.createElement('main');
+    mainContent.classList.add('blurb');
+    mainContent.setAttribute('id', 'main');
+    return mainContent
 }
 
 const createFooter = () => {
@@ -68,7 +50,6 @@ const createFooter = () => {
     footer.classList.add('footer');
 
     const credit = document.createElement("p");
-    // credit.textContent = `Copyright © ${new Date().getFullYear()} abertjames`;
     credit.textContent = `Copyright \u00A9 ${new Date().getFullYear()} abertjames`;
 
     footer.appendChild(credit);
@@ -90,18 +71,18 @@ const createBackgroundImage = () => {
 
 
 
-
+////////////////////////////////////////////////////////
 
 const initializeWebsite = () => {
     const content = document.getElementById("content");
 
+    content.appendChild(createMainContent());
     content.appendChild(createHeader());
-    content.appendChild(createBlurb());
+    // content.appendChild(createBlurb());
     content.appendChild(createFooter());
 
     content.appendChild(createBackgroundImage());
-
-    console.log("hello");
+    loadBlurb();
 }
 
 export default initializeWebsite;
