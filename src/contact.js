@@ -26,8 +26,10 @@ const loadContactPage = () => {
     const content = document.getElementById('content');
     content.appendChild(makeContactPage());
 
-    console.log('howdy')
-
+    const mainContent = document.getElementById('main');
+    mainContent.innerHTML = '';
+    // mainContent.classList.add('menu');
+    mainContent.appendChild(makeContactPage());
 }
 
 export default loadContactPage;

@@ -51,6 +51,9 @@ button:hover{
 .blurb{
     z-index: 1;
     position: fixed;
+
+    padding: 1rem;
+
     top: 25vh;
     width: 40vw;
     height: 60vh;
@@ -114,6 +117,37 @@ button:hover{
 }
 
 /* end contact page */
+
+/* menu page */
+
+.menu {
+    /* display: grid;
+    row-gap: 3rem; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    /* row-gap: 1rem; */
+}
+
+.menuItem {
+    border: var(--border-color);
+    height: fit-content;
+    /* width: 95%; */
+}
+
+.specifics {
+    display: flex;
+    /* grid-auto-flow: column; */
+    /* column-gap: auto; */
+    justify-content: space-between;
+    border: var(--border-color);
+}
+
+p:last-child {
+    padding-left: 3rem;
+}
+
+/* end menu page */
 
 .header, .footer, .blurb, body{
     /* border: 1px solid black; */

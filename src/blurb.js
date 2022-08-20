@@ -27,10 +27,9 @@ const createBlurb = () => {
 }
 
 const loadBlurb = () => {
-    const main = document.getElementById('main');
-    main.innerHTML = '';
-
-    main.appendChild(createBlurb());
+    const mainContent = document.getElementById('main');
+    mainContent.innerHTML = '';
+    mainContent.appendChild(createBlurb());
 }
 
 export default loadBlurb;

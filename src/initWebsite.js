@@ -1,4 +1,6 @@
 import loadBlurb from "./blurb";
+import loadMenuPage from "./menu"
+import loadContactPage from "./contact";
 
 const createHeader = () => {
     const header = document.createElement('header');
@@ -82,7 +84,8 @@ const initializeWebsite = () => {
     content.appendChild(createFooter());
 
     content.appendChild(createBackgroundImage());
-    loadBlurb();
+    // loadBlurb();
+    loadMenuPage();
 }
 
 export default initializeWebsite;
