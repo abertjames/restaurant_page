@@ -23,15 +23,24 @@ const createNavBar = () =>  {
     homeButton.textContent = 'Home';
     // homeButton.classList.add('button');
     // add button functionality event listener here 
+    homeButton.addEventListener('click', () =>{
+        loadBlurb();
+    })
     
     const menuButton = document.createElement('button');
     menuButton.textContent = 'Menu';
     // menuButton.classList.add('button');
+    menuButton.addEventListener('click', () => {
+        loadMenuPage();
+    })
 
 
     const contactButton = document.createElement('button');
     contactButton.textContent = 'Contact';
     // contactButton.classList.add('button');
+    contactButton.addEventListener('click', () => {
+        loadContactPage();
+    })
 
     navBar.appendChild(homeButton);
     navBar.appendChild(menuButton);
@@ -84,8 +93,8 @@ const initializeWebsite = () => {
     content.appendChild(createFooter());
 
     content.appendChild(createBackgroundImage());
-    // loadBlurb();
-    loadMenuPage();
+    loadBlurb();
+    // loadMenuPage();
 }
 
 export default initializeWebsite;

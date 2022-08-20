@@ -28,7 +28,9 @@ const createBlurb = () => {
 
 const loadBlurb = () => {
     const mainContent = document.getElementById('main');
-    mainContent.innerHTML = '';
+    // mainContent.innerHTML = '';
+    mainContent.innerText = '';
+
     mainContent.appendChild(createBlurb());
 }
 

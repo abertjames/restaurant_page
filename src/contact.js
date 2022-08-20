@@ -23,11 +23,10 @@ const makeContactPage = () => {
 }
 
 const loadContactPage = () => {
-    const content = document.getElementById('content');
-    content.appendChild(makeContactPage());
-
     const mainContent = document.getElementById('main');
-    mainContent.innerHTML = '';
+    // mainContent.innerHTML = '';
+    mainContent.innerText = '';
+
     // mainContent.classList.add('menu');
     mainContent.appendChild(makeContactPage());
 }

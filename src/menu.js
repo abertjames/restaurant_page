@@ -3,7 +3,8 @@ const createMenuPage = () => {
     menu.classList.add('menu');
 
     menu.appendChild(createMenuItem('Five Dollar Shake', 'Milk, choice of vanilla, chocolate, or strawberry icecream', '$5'));
-    menu.appendChild(createMenuItem('fart', 'lard', '$8'));
+    menu.appendChild(createMenuItem('Cheese Burger', 'Beef patty, lettuce, tomato, cheddar cheese', '$10'));
+    menu.appendChild(createMenuItem('Pizza', 'margherita cheese, tomato sauce, with or without pepperoni','$12'));
 
     return menu
 }
@@ -40,7 +41,9 @@ const createMenuItem = (itemName, ingredients, price) => {
 
 const loadMenuPage = () => {
     const mainContent = document.getElementById('main');
-    mainContent.innerHTML = '';
+    // mainContent.innerHTML = '';
+    mainContent.innerText = '';
+
     mainContent.appendChild(createMenuPage());
 }
 
