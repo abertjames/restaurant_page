@@ -68,12 +68,13 @@ const createFooter = () => {
     return footer
 }
 
-const createBackgroundImage = () => {
+const createBackgroundImage = (source, alternate) => {
     const bkgImg = document.createElement('img');
-    bkgImg.src = 'images/Jack_Rabbit_Slims_CC_Master_Squares_Layers_1200x1200.webp';
-    bkgImg.alt = 'jack rabbit slim'
-
+    bkgImg.setAttribute('id', 'backgroundImage');
     bkgImg.classList.add('bkgImg');
+
+    bkgImg.src = source;
+    bkgImg.alt = alternate;
 
     return bkgImg
 }
@@ -89,12 +90,11 @@ const initializeWebsite = () => {
 
     content.appendChild(createMainContent());
     content.appendChild(createHeader());
-    // content.appendChild(createBlurb());
     content.appendChild(createFooter());
 
-    content.appendChild(createBackgroundImage());
+    content.appendChild(createBackgroundImage('images/Jack_Rabbit_Slims_CC_Master_Squares_Layers_1200x1200.webp','jack rabbit slim'));
+
     loadBlurb();
-    // loadMenuPage();
 }
 
-export default initializeWebsite;
+export {initializeWebsite, createBackgroundImage};

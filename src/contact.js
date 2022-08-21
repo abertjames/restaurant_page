@@ -24,11 +24,14 @@ const makeContactPage = () => {
 
 const loadContactPage = () => {
     const mainContent = document.getElementById('main');
-    // mainContent.innerHTML = '';
-    mainContent.innerText = '';
-
     // mainContent.classList.add('menu');
+    mainContent.innerHTML = '';
+    // mainContent.innerText = '';
     mainContent.appendChild(makeContactPage());
+
+    const bkgImg = document.getElementById('backgroundImage');
+    bkgImg.src = 'images/jack-rabbit-slims-REG-web_864x.webp';
+    bkgImg.alt = 'uma dancing';
 }
 
 export default loadContactPage;

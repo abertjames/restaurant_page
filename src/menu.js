@@ -1,3 +1,5 @@
+import { createBackgroundImage } from "./initWebsite";
+
 const createMenuPage = () => {
     const menu = document.createElement('div');
     menu.classList.add('menu');
@@ -41,10 +43,13 @@ const createMenuItem = (itemName, ingredients, price) => {
 
 const loadMenuPage = () => {
     const mainContent = document.getElementById('main');
-    // mainContent.innerHTML = '';
-    mainContent.innerText = '';
+    mainContent.innerHTML = '';
+    // mainContent.innerText = '';
 
     mainContent.appendChild(createMenuPage());
+    const bkgImg = document.getElementById('backgroundImage');
+    bkgImg.src = 'images/the-slim-s-diner.jpeg';
+    bkgImg.alt = 'the slims diner';
 }
 
 export default loadMenuPage;

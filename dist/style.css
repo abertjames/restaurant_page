@@ -10,21 +10,21 @@
 
 @font-face {
     font-family: "merriweather";
-    src: url('/Users/abertjames/restaurant_page/dist/merriweather-regular-webfont.woff2') format('woff2'),
+    src: url('fonts/merriweather-regular-webfont.woff2') format('woff2'),
 
-    url('/Users/abertjames/restaurant_page/dist/merriweather-regular-webfont.woff') format('woff');
+    url('fonts/merriweather-regular-webfont.woff') format('woff');
 
     font-weight: 600;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'diner';
+    src: url('fonts/blackjack/blackjack.otf') ;
+}
 body {
     display: grid;
     position: relative;
-    /* height: 100vh; */
-    /* z-index: 1; */
-
-    font-family: 'merriweather';
 }
 #content {
     display: grid;
@@ -39,12 +39,12 @@ body {
     justify-items: center;
     top: 0;
     width: 100vw;
-    /* height: 20vh; */
     z-index: 1;
 
     background-color: var(--background-color-dark);   
     border: var(--border-color); 
-
+    font-family: 'diner';
+    font-size: x-large;
 }
 
 button{
@@ -77,15 +77,11 @@ button:hover{
 
     background-color: var(--background-color-dark);    
     border: var(--border-color); 
+    font-family: 'merriweather';
 }
 
 .imageCropper {
-    /* align-self: center;
-    grid-column: 1/2;
-    grid-row: 1/3; */
 
-    /* height: 3rem;
-    width: 3rem; */
     height: 50vh;
     width: 50vh;
     position: relative;
@@ -97,16 +93,12 @@ button:hover{
 .coverPhoto {
     margin-top: 15%;
     max-width: 100%;
-    /* max-height: 100%; */
     height: auto;
 }
 
 
 .bkgImg {
     width: 100vw;
-    /* z-index: 0; */
-    /* position: absolute; */
-    /* top: 0; */
 }
 
 .footer {
@@ -134,24 +126,18 @@ button:hover{
 /* menu page */
 
 .menu {
-    /* display: grid;
-    row-gap: 3rem; */
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-    /* row-gap: 1rem; */
 }
 
 .menuItem {
     border: var(--border-color);
     height: fit-content;
-    /* width: 95%; */
 }
 
 .specifics {
     display: flex;
-    /* grid-auto-flow: column; */
-    /* column-gap: auto; */
     justify-content: space-between;
     border: var(--border-color);
 }
@@ -163,7 +149,5 @@ p:last-child {
 /* end menu page */
 
 .header, .footer, .blurb, body{
-    /* border: 1px solid black; */
-    /* use body or html to code this sort of thing  */
     color: blueviolet;
 }

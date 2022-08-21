@@ -28,10 +28,14 @@ const createBlurb = () => {
 
 const loadBlurb = () => {
     const mainContent = document.getElementById('main');
-    // mainContent.innerHTML = '';
-    mainContent.innerText = '';
-
+    mainContent.innerHTML = '';
+    // mainContent.innerText = '';
     mainContent.appendChild(createBlurb());
+
+    const bkgImg = document.getElementById('backgroundImage');
+    bkgImg.src ='images/Jack_Rabbit_Slims_CC_Master_Squares_Layers_1200x1200.webp';
+    bkgImg.alt = 'jack rabbit slim';
+
 }
 
 export default loadBlurb;
