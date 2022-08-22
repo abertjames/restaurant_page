@@ -22,9 +22,11 @@
     font-family: 'diner';
     src: url('fonts/blackjack/blackjack.otf') ;
 }
+
 body {
     display: grid;
     position: relative;
+    color: #8a2be2;
 }
 #content {
     display: grid;
@@ -56,9 +58,14 @@ button{
     border-bottom: 2px solid transparent;
     padding: 2rem;
 }
+
 button:hover{
     border-bottom: 2px solid white;
     transform: translateY(-10%);
+}
+
+button.active {
+    border-bottom: 2px solid white;
 }
 
 .blurb{
@@ -121,6 +128,21 @@ button:hover{
     background-color: black;
 }
 
+.icon {
+    width: 1.5rem;
+    margin-left: 1rem;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(97%) saturate(7401%) hue-rotate(269deg) brightness(93%) contrast(91%);
+}
+
+.contactInfo {
+    display: flex;
+    width: 100%;
+}
+
+.contactInfo p {
+    margin-left: auto;
+    margin-right: auto;
+}
 /* end contact page */
 
 /* menu page */
@@ -147,7 +169,3 @@ p:last-child {
 }
 
 /* end menu page */
-
-.header, .footer, .blurb, body{
-    color: blueviolet;
-}

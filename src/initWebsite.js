@@ -21,24 +21,26 @@ const createNavBar = () =>  {
 
     const homeButton = document.createElement('button');
     homeButton.textContent = 'Home';
-    // homeButton.classList.add('button');
-    // add button functionality event listener here 
-    homeButton.addEventListener('click', () =>{
+    homeButton.addEventListener('click', (e) =>{
+        if (e.target.classList.contains("active")) return;
+        setActiveButton(homeButton);
         loadBlurb();
     })
     
     const menuButton = document.createElement('button');
     menuButton.textContent = 'Menu';
-    // menuButton.classList.add('button');
-    menuButton.addEventListener('click', () => {
+    menuButton.addEventListener('click', (e) => {
+        if (e.target.classList.contains("active")) return;
+        setActiveButton(menuButton);
         loadMenuPage();
     })
 
 
     const contactButton = document.createElement('button');
     contactButton.textContent = 'Contact';
-    // contactButton.classList.add('button');
-    contactButton.addEventListener('click', () => {
+    contactButton.addEventListener('click', (e) => {
+        if (e.target.classList.contains("active")) return;
+        setActiveButton(contactButton);
         loadContactPage();
     })
 
@@ -47,6 +49,18 @@ const createNavBar = () =>  {
     navBar.appendChild(contactButton);
   
     return navBar;
+}
+
+const setActiveButton = (button) => { 
+    const buttonList = Array.from(document.querySelectorAll('button'));
+
+    buttonList.forEach((button) => {
+        if (button.classList.contains('active')){
+            button.classList.remove('active');
+        }
+    });
+
+    button.classList.add('active');
 }
 
 const createMainContent = () => {
@@ -95,6 +109,9 @@ const initializeWebsite = () => {
     content.appendChild(createBackgroundImage('images/Jack_Rabbit_Slims_CC_Master_Squares_Layers_1200x1200.webp','jack rabbit slim'));
 
     loadBlurb();
+    setActiveButton(document.querySelector('button'));
+    // homeButton.classList.add('active');
+    // loadContactPage();
 }
 
 export {initializeWebsite, createBackgroundImage};
